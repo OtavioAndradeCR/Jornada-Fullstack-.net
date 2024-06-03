@@ -1,8 +1,7 @@
 using Fina.Api;
 using Fina.Api.Common.Api;
 using Fina.Api.Endpoints;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.Hosting;
+using Fina.Core;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.AddConfiguration();

@@ -1,5 +1,3 @@
-﻿using System;
-
 namespace Fina.Core.Common;
 
 public static class DateTimeExtension

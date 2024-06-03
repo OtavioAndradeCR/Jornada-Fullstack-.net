@@ -1,5 +1,3 @@
-﻿using Microsoft.AspNetCore.Builder;
-
 namespace Fina.Api.Common.Api;
 
 public static class AppExtension

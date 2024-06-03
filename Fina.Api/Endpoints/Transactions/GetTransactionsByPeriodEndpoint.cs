@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+using System.Security.Claims;
 using Fina.Api.Common.Api;
 using Fina.Core;
 using Fina.Core.Handlers;
 using Fina.Core.Models;
 using Fina.Core.Requests.Transactions;
 using Fina.Core.Responses;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Routing;
 
 namespace Fina.Api.Endpoints.Transactions;
 

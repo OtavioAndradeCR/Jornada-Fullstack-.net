@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Fina.Api.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240603135135_v1")]
+    [Migration("20240529000754_v1")]
     partial class v1
     {
         /// <inheritdoc />
@@ -34,19 +34,22 @@ namespace Fina.Api.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(255)
+                        .HasColumnType("NVARCHAR");
 
                     b.Property<string>("Title")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(80)
+                        .HasColumnType("NVARCHAR");
 
                     b.Property<string>("UserId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(160)
+                        .HasColumnType("VARCHAR");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Category", (string)null);
                 });
 
             modelBuilder.Entity("Fina.Core.Models.Transaction", b =>
@@ -58,7 +61,7 @@ namespace Fina.Api.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<decimal>("Amount")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("MONEY");
 
                     b.Property<long>("CategoryId")
                         .HasColumnType("bigint");
@@ -69,22 +72,24 @@ namespace Fina.Api.Migrations
                     b.Property<DateTime?>("PaidOrReceivedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Tittle")
+                    b.Property<string>("Title")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(80)
+                        .HasColumnType("NVARCHAR");
 
-                    b.Property<int>("Type")
-                        .HasColumnType("int");
+                    b.Property<short>("Type")
+                        .HasColumnType("SMALLINT");
 
                     b.Property<string>("UserId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(160)
+                        .HasColumnType("VARCHAR");
 
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("Transactions");
+                    b.ToTable("Transaction", (string)null);
                 });
 
             modelBuilder.Entity("Fina.Core.Models.Transaction", b =>

@@ -1,5 +1,3 @@
-﻿using System;
-
 namespace Fina.Core.Requests.Transactions;
 
 public class GetTransactionsByPeriodRequest : PagedRequest

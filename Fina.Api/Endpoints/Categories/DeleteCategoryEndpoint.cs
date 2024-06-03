@@ -1,12 +1,9 @@
-﻿using System.Threading.Tasks;
+using System.Security.Claims;
 using Fina.Api.Common.Api;
 using Fina.Core.Handlers;
 using Fina.Core.Models;
 using Fina.Core.Requests.Categories;
 using Fina.Core.Responses;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Routing;
 
 namespace Fina.Api.Endpoints.Categories;
 

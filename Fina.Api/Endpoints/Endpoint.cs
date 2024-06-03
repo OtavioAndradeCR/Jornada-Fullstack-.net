@@ -1,9 +1,6 @@
-﻿using Fina.Api.Common.Api;
+using Fina.Api.Common.Api;
 using Fina.Api.Endpoints.Categories;
 using Fina.Api.Endpoints.Transactions;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Routing;
 
 namespace Fina.Api.Endpoints;
 

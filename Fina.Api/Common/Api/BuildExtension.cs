@@ -1,11 +1,8 @@
-﻿using Fina.Api.Data;
+using Fina.Api.Data;
 using Fina.Api.Handlers;
 using Fina.Core;
 using Fina.Core.Handlers;
-using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace Fina.Api.Common.Api;
 
